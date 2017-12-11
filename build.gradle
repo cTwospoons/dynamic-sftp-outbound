@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     ext {
-        springBootVersion = '1.4.1.RELEASE'
+        springBootVersion = '1.5.6.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -22,13 +22,13 @@ repositories {
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.13'
 
-    compile 'org.springframework.boot:spring-boot-starter-batch'
+    compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.springframework.integration:spring-integration-core'
     compile 'org.springframework.integration:spring-integration-sftp'
     compile 'org.springframework.integration:spring-integration-java-dsl'
-    compile 'org.springframework.batch:spring-batch-integration'
 
+    compile group: 'com.h2database', name: 'h2', version: '1.4.196'
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
